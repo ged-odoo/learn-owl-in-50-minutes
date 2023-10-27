@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+          <template id="oxp.page" name="OXP Demo App">
+            <html>
+                <head>
+                    <link type="image/x-icon" rel="shortcut icon" href="/web/static/img/favicon.ico"/>
+                    <t t-call-assets="oxp.assets"/>
+                </head>
+
+                <body>
+                </body>
+            </html>
+          </template>
+    </data>
+</odoo>
