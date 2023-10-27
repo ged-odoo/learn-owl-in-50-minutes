@@ -1,6 +1,7 @@
 /** @odoo-module **/
 
-import { Component, useState, onMounted, useRef } from "@odoo/owl";
+import { Component, useState } from "@odoo/owl";
+import { useAutofocus } from "../utils";
 import { TodoItem } from "./todo_item";
 
 export class TodoList extends Component {
@@ -13,10 +14,7 @@ export class TodoList extends Component {
       { id: 2, description: "write tutorial", isCompleted: true },
       { id: 3, description: "buy milk", isCompleted: false },
     ]);
-    const ref = useRef("input");
-    onMounted(() => {
-      ref.el.focus();
-    });
+    useAutofocus("input");
   }
 
   addTodo(ev) {
