@@ -2,7 +2,11 @@
 <templates xml:space="preserve">
 
     <t t-name="oxp.TodoList">
-        todo list here
+        <div class="d-inline-block border p-2 m-2">
+            <t t-foreach="todos" t-as="todo" t-key="todo.id">
+                <TodoItem todo="todo"/>
+            </t>
+        </div>
     </t>
 
 </templates>
