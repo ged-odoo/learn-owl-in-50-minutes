@@ -2,6 +2,9 @@
 <templates xml:space="preserve">
 
     <t t-name="oxp.TodoList">
+        <input type="text" placeholder="Add a todo"
+            class="form-control mb-3" 
+            t-on-keyup="addTodo"/>
         <div class="d-inline-block border p-2 m-2">
             <t t-foreach="todos" t-as="todo" t-key="todo.id">
                 <TodoItem todo="todo"/>
