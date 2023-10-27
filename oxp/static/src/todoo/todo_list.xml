@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
 
     <t t-name="oxp.TodoList">
-        <input type="text" placeholder="Add a todo"
+        <input type="text" placeholder="Add a todo" t-ref="input"
             class="form-control mb-3" 
             t-on-keyup="addTodo"/>
         <div class="d-inline-block border p-2 m-2">
