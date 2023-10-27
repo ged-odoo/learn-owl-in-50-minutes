@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
 
-<t t-name="oxp.Page">
-  <div class="p-3">
-    hello world
+<t t-name="oxp.Navbar">
+  <div class="o-navbar p-2 text-white">
+    navbar
   </div>
 </t>
 

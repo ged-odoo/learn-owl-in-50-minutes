@@ -1,10 +1,14 @@
 /** @odoo-module **/
 
 import { mount, whenReady } from "@odoo/owl";
-import { Page } from "./page";
+import { WebClient } from "./web_client";
 import { templates } from "@web/core/assets";
 
-// Mount the Page component when the document.body is ready
+// Mount the WebClient component when the document.body is ready
 whenReady(() => {
-  mount(Page, document.body, { templates, dev: true, name: "OXP Demo App" });
+  mount(WebClient, document.body, {
+    templates,
+    dev: true,
+    name: "OXP Demo App: Web Client",
+  });
 });
