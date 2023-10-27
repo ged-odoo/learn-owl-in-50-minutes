@@ -3,7 +3,9 @@
 
 <t t-name="oxp.Navbar">
   <div class="o-navbar p-2 text-white">
-    navbar
+    <span class="mx-1">
+      <t t-out="props.currentApp"/>
+    </span>
   </div>
 </t>
 
