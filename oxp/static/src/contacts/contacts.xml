@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+<t t-name="oxp.Contacts">
+  <div class="o-action">
+    <div class="o-control-panel d-flex align-items-center">
+      Contacts
+    </div>
+    <div class="o-content">
+    </div>
+  </div>
+</t>
+
+</templates>

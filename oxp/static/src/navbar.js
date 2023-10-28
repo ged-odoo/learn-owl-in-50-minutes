@@ -6,5 +6,7 @@ export class Navbar extends Component {
   static template = "oxp.Navbar";
   static props = {
     currentApp: String,
+    apps: Array,
+    selectApp: Function,
   };
 }

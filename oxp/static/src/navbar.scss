@@ -1,3 +1,8 @@
 .o-navbar {
-    background-color: #714B67;
+  background-color: #714b67;
+
+  .o-active-app {
+    font-weight: bold;
+    background-color: #51394a;
+  }
 }

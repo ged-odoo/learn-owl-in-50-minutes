@@ -2,10 +2,15 @@
 <templates xml:space="preserve">
 
 <t t-name="oxp.Navbar">
-  <div class="o-navbar p-2 text-white">
-    <span class="mx-1">
-      <t t-out="props.currentApp"/>
-    </span>
+  <div class="o-navbar text-white">
+    <t t-foreach="props.apps" t-as="app" t-key="app.id">
+      <span type="button"
+          class="p-2"
+          t-att-class="{'o-active-app': app.id === props.currentApp}"
+          t-on-click="() => this.props.selectApp(app.id)">
+        <t t-out="app.name"/>
+      </span>
+    </t>
   </div>
 </t>
 
