@@ -2,16 +2,8 @@
 <templates xml:space="preserve">
 
 <t t-name="oxp.WebClient">
-  <Navbar apps="apps" currentApp="state.currentApp" selectApp.bind="selectApp"/>
-  <t t-if="state.currentApp === 'todoo'">
-    <Todoo />
-  </t>
-  <t t-if="state.currentApp === 'dashboard'">
-    <Dashboard />
-  </t>
-  <t t-if="state.currentApp === 'contacts'">
-    <Contacts />
-  </t>
+  <Navbar apps="apps" currentApp="state.currentApp.id" selectApp.bind="selectApp"/>
+  <t t-component="state.currentApp.Component"/>
 </t>
 
 </templates>
