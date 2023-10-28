@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
 
-    <t t-name="oxp.TodoList">
-        <input type="text" placeholder="Add a todo" t-ref="input"
-            class="form-control mb-3" 
-            t-on-keyup="addTodo"/>
-        <div class="d-inline-block border p-2 m-2">
-            <t t-foreach="todos" t-as="todo" t-key="todo.id">
-                <TodoItem todo="todo" toggle.bind="toggleTodo" remove.bind="removeTodo"/>
-            </t>
-        </div>
-    </t>
+<t t-name="oxp.TodoList">
+  <div class="o-todolist border m-1 p-2">    
+    <input type="text" placeholder="Add a todo" t-ref="input"
+      class="form-control mb-3" 
+      t-on-keyup="addTodo"/>
+    <div class="m-2">
+      <t t-foreach="todos" t-as="todo" t-key="todo.id">
+        <TodoItem todo="todo" toggle.bind="toggleTodo" remove.bind="removeTodo"/>
+      </t>
+    </div>
+  </div>
+</t>
 
 </templates>

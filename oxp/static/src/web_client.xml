@@ -3,9 +3,7 @@
 
 <t t-name="oxp.WebClient">
   <Navbar currentApp="'todoo'"/>
-  <div class="p-3">
-    <TodoList />
-  </div>
+  <Todoo />
 </t>
 
 </templates>

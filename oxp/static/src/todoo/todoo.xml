@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+<t t-name="oxp.Todoo">
+  <div class="o-action">
+    <div class="o-control-panel d-flex align-items-center">
+      Control Panel!
+    </div>
+    <div class="o-content d-flex align-items-start p-1">
+      <TodoList />
+    </div>
+  </div>
+</t>
+
+</templates>

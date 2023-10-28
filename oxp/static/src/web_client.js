@@ -2,9 +2,9 @@
 
 import { Component } from "@odoo/owl";
 import { Navbar } from "./navbar";
-import { TodoList } from "./todoo/todo_list";
+import { Todoo } from "./todoo/todoo";
 
 export class WebClient extends Component {
   static template = "oxp.WebClient";
-  static components = { Navbar, TodoList };
+  static components = { Navbar, Todoo };
 }
