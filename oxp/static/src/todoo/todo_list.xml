@@ -3,6 +3,7 @@
 
 <t t-name="oxp.TodoList">
   <div class="o-todolist border m-1 p-2">    
+    <h3><t t-esc="props.name"/></h3>
     <input type="text" placeholder="Add a todo" t-ref="input"
       class="form-control mb-3" 
       t-on-keyup="addTodo"/>
