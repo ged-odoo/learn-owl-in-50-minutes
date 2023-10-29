@@ -1,0 +1,14 @@
+.o-action {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  .o-control-panel {
+    height: 40px;
+  }
+
+  .o-content {
+    background-color: var(--bs-secondary);
+    flex-grow: 1;
+  }
+}

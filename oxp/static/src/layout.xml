@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+<t t-name="oxp.Layout">
+  <div class="o-action">
+    <div class="o-control-panel d-flex align-items-center">
+      <t t-slot="control-panel"/>
+    </div>
+    <div class="o-content" t-att-class="props.contentClass">
+      <t t-slot="default"/>
+    </div>
+  </div>
+</t>
+
+</templates>

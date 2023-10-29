@@ -2,13 +2,11 @@
 <templates xml:space="preserve">
 
 <t t-name="oxp.Dashboard">
-  <div class="o-action">
-    <div class="o-control-panel d-flex align-items-center">
+  <Layout>
+    <t t-set-slot="control-panel">
       Dashboard
-    </div>
-    <div class="o-content">
-    </div>
-  </div>
+    </t>
+  </Layout>
 </t>
 
 </templates>

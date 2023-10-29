@@ -2,18 +2,16 @@
 <templates xml:space="preserve">
 
 <t t-name="oxp.Todoo">
-  <div class="o-action">
-    <div class="o-control-panel d-flex align-items-center">
+  <Layout contentClass="'d-flex align-items-start p-1'">
+    <t t-set-slot="control-panel">
       <button class="btn btn-primary btn-sm m-2" t-on-click="addNewList">
         New List
       </button>
-    </div>
-    <div class="o-content d-flex align-items-start p-1">
-      <t t-foreach="store.lists" t-as="list" t-key="list.id">
-        <TodoList list="list"/>
-      </t>
-    </div>
-  </div>
+    </t>
+    <t t-foreach="store.lists" t-as="list" t-key="list.id">
+      <TodoList list="list"/>
+    </t>
+  </Layout>
 </t>
 
 </templates>
