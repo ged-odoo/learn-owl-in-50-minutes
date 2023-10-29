@@ -1,8 +1,9 @@
 /** @odoo-module **/
 
-import { Component, useState } from "@odoo/owl";
+import { Component } from "@odoo/owl";
 import { useAutofocus } from "../utils";
 import { TodoItem } from "./todo_item";
+import { useTodoStore } from "./todo_store";
 
 export class TodoList extends Component {
   static template = "oxp.TodoList";
@@ -10,7 +11,7 @@ export class TodoList extends Component {
   static props = { list: Object };
 
   setup() {
-    this.store = useState(this.env.todoStore);
+    this.store = useTodoStore();
     useAutofocus("input");
   }
 

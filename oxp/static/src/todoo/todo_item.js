@@ -1,6 +1,7 @@
 /** @odoo-module */
 
-import { Component, useState } from "@odoo/owl";
+import { Component } from "@odoo/owl";
+import { useTodoStore } from "./todo_store";
 
 export class TodoItem extends Component {
   static template = "oxp.TodoItem";
@@ -17,7 +18,7 @@ export class TodoItem extends Component {
   };
 
   setup() {
-    this.store = useState(this.env.todoStore);
+    this.store = useTodoStore();
   }
 
   onChange() {

@@ -1,5 +1,7 @@
 /** @odoo-module */
 
+import { useEnv, useState } from "@odoo/owl";
+
 export class TodoStore {
   static nextId = 1;
 
@@ -34,4 +36,23 @@ export class TodoStore {
     const index = list.todos.findIndex((t) => t.id === todoId);
     list.todos.splice(index, 1);
   }
+
+  getNumbers() {
+    let completed = 0;
+    let total = 0;
+    for (let list of this.lists) {
+      total += list.todos.length;
+      for (let todo of list.todos) {
+        if (todo.isCompleted) {
+          completed++;
+        }
+      }
+    }
+    return { completed, total };
+  }
+}
+
+export function useTodoStore() {
+  const env = useEnv();
+  return useState(env.todoStore);
 }

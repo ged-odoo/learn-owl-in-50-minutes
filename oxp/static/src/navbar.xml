@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
 
 <t t-name="oxp.Navbar">
-  <div class="o-navbar text-white">
+  <div class="o-navbar text-white d-flex align-items-center">
     <t t-foreach="props.apps" t-as="app" t-key="app.id">
       <span type="button"
           class="p-2"
@@ -11,6 +11,11 @@
         <t t-out="app.name"/>
       </span>
     </t>
+    <span class="flex-grow-1"/>
+    <span class="badge bg-dark p-2 m-1">
+        <t t-set="numbers" t-value="todoStore.getNumbers()"/>
+        Todos: <t t-esc="numbers.completed"/> / <t t-esc="numbers.total"/>
+    </span>
   </div>
 </t>
 
