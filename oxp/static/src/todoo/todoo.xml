@@ -9,8 +9,8 @@
       </button>
     </div>
     <div class="o-content d-flex align-items-start p-1">
-      <t t-foreach="lists" t-as="list" t-key="list.id">
-        <TodoList name="list.name"/>
+      <t t-foreach="store.lists" t-as="list" t-key="list.id">
+        <TodoList list="list"/>
       </t>
     </div>
   </div>

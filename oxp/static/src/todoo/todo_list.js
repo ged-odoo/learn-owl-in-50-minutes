@@ -7,36 +7,17 @@ import { TodoItem } from "./todo_item";
 export class TodoList extends Component {
   static template = "oxp.TodoList";
   static components = { TodoItem };
-  static props = { name: String };
+  static props = { list: Object };
 
   setup() {
-    this.nextId = 4;
-    this.todos = useState([]);
+    this.store = useState(this.env.todoStore);
     useAutofocus("input");
   }
 
   addTodo(ev) {
     if (ev.keyCode === 13 && ev.target.value != "") {
-      this.todos.push({
-        id: this.nextId++,
-        description: ev.target.value,
-        isCompleted: false,
-      });
+      this.store.addTodo(this.props.list.id, ev.target.value);
       ev.target.value = "";
-    }
-  }
-
-  toggleTodo(todoId) {
-    const todo = this.todos.find((todo) => todo.id === todoId);
-    if (todo) {
-      todo.isCompleted = !todo.isCompleted;
-    }
-  }
-
-  removeTodo(todoId) {
-    const todoIndex = this.todos.findIndex((todo) => todo.id === todoId);
-    if (todoIndex >= 0) {
-      this.todos.splice(todoIndex, 1);
     }
   }
 }

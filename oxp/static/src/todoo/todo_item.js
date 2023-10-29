@@ -1,23 +1,32 @@
 /** @odoo-module */
 
-import { Component } from "@odoo/owl";
+import { Component, useState } from "@odoo/owl";
 
 export class TodoItem extends Component {
   static template = "oxp.TodoItem";
   static props = {
     todo: {
       type: Object,
-      shape: { id: Number, description: String, isCompleted: Boolean },
+      shape: {
+        id: Number,
+        listId: Number,
+        description: String,
+        isCompleted: Boolean,
+      },
     },
-    toggle: Function,
-    remove: Function,
   };
 
+  setup() {
+    this.store = useState(this.env.todoStore);
+  }
+
   onChange() {
-    this.props.toggle(this.props.todo.id);
+    const todo = this.props.todo;
+    this.store.toggleTodo(todo.listId, todo.id);
   }
 
   onRemove() {
-    this.props.remove(this.props.todo.id);
+    const todo = this.props.todo;
+    this.store.removeTodo(todo.listId, todo.id);
   }
 }

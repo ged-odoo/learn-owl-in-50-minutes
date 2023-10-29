@@ -8,12 +8,10 @@ export class Todoo extends Component {
   static components = { TodoList };
 
   setup() {
-    this.nextId = 1;
-    this.lists = useState([]);
+    this.store = useState(this.env.todoStore);
   }
 
   addNewList() {
-    const id = this.nextId++;
-    this.lists.push({ id, name: `List ${id}` });
+    this.store.createList();
   }
 }

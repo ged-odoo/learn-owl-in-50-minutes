@@ -1,10 +1,11 @@
 /** @odoo-module **/
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState, useSubEnv } from "@odoo/owl";
 import { Navbar } from "./navbar";
 import { Todoo } from "./todoo/todoo";
 import { Dashboard } from "./dashboard/dashboard";
 import { Contacts } from "./contacts/contacts";
+import { TodoStore } from "./todoo/todo_store";
 
 export class WebClient extends Component {
   static template = "oxp.WebClient";
@@ -19,10 +20,14 @@ export class WebClient extends Component {
     this.state = useState({
       currentApp: this.apps[0],
     });
+    const todoStore = useState(new TodoStore());
+
+    // add store to environment
+    useSubEnv({ todoStore });
   }
 
   selectApp(appId) {
-    const newApp = this.apps.find(app => app.id === appId);
+    const newApp = this.apps.find((app) => app.id === appId);
     this.state.currentApp = newApp;
   }
 }
