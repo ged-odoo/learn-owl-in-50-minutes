@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 import { Component } from "@odoo/owl";
-import { useTodoStore } from "./todoo/todo_store";
+import { useTodoStore } from "../todoo/todo_store";
 
 export class Navbar extends Component {
   static template = "oxp.Navbar";

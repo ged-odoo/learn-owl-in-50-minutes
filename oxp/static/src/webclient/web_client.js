@@ -2,10 +2,10 @@
 
 import { Component, useState, useSubEnv } from "@odoo/owl";
 import { Navbar } from "./navbar";
-import { Todoo } from "./todoo/todoo";
-import { Dashboard } from "./dashboard/dashboard";
-import { Contacts } from "./contacts/contacts";
-import { TodoStore } from "./todoo/todo_store";
+import { Todoo } from "../todoo/todoo";
+import { Dashboard } from "../dashboard/dashboard";
+import { Contacts } from "../contacts/contacts";
+import { TodoStore } from "../todoo/todo_store";
 
 export class WebClient extends Component {
   static template = "oxp.WebClient";

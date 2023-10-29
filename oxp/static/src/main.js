@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 import { mount, whenReady } from "@odoo/owl";
-import { WebClient } from "./web_client";
+import { WebClient } from "./webclient/web_client";
 import { templates } from "@web/core/assets";
 
 // Mount the WebClient component when the document.body is ready
