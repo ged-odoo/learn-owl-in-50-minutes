@@ -43,6 +43,9 @@
             # remove some files that we do not use to create a minimal bundle
             ('remove', 'web/static/src/core/**/*'),
             ('remove', 'web/static/lib/luxon/luxon.js'),
+            'web/static/src/core/utils/concurrency.js',
+            'web/static/src/core/utils/strings.js',
+            'web/static/src/core/l10n/translation.js',
             'web/static/src/core/utils/functions.js',
             'web/static/src/core/browser/browser.js',
             'web/static/src/core/registry.js',
